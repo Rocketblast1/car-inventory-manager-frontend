@@ -8,6 +8,9 @@ import {
 } from "react-router-dom";
 
 import reportWebVitals from './reportWebVitals';
+
+import { BrowserRouter } from 'react-router-dom';
+
 const router = createBrowserRouter([
   {
     path: "/",
@@ -15,7 +18,6 @@ const router = createBrowserRouter([
     ,
   },
 ]);
-
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
