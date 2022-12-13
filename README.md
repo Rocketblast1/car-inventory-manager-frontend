@@ -10,4 +10,4 @@ We plan on having __7__ screens:
 * Admin Edit/Add Car
 
 ## Below is our project wireframe:
-![alt text](/seat reservation project wireframe 2.png)
+![alt text](/seat-reservation-project-wireframe-2.png)
