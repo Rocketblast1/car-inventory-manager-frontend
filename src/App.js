@@ -10,11 +10,11 @@ import Signup from './components/Screens/Auth/Signup';
 import LoginForm from './components/Screens/Auth/LoginForm';
 
 function App() {
-  if(logedin)
+ 
   return (
     <div className="App">
       
-      <MainHeader/>
+      {/* <MainHeader/>
      <ValidatedLoginForm/>
       <Routes>
         <Route path="/" element={<Home/> } exact />
@@ -23,7 +23,7 @@ function App() {
         
         
       </Routes>
-      <Footer/>
+      <Footer/> */}
       
 
       </div>
