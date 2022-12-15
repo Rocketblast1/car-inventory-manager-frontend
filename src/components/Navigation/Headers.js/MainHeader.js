@@ -21,6 +21,9 @@ const MainHeader = () => {
                         <Link className="nav-link" to="/Signin">SignIN</Link>
 
                         <Link className="nav-link" to="/Signup">SignUP</Link>
+
+                        <Link className="nav-link" to="/UserViewCars"> View All Cars </Link>
+
                         
                     </div>
                     </div>

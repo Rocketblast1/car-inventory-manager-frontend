@@ -119,8 +119,6 @@ const AddCar = () => {
                                />
                     </div>
 
-                    
-
                     <button className='btn btn-primary'
                             type='submit'>
                         Add

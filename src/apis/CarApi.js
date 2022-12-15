@@ -66,4 +66,4 @@ const CarAPI = {
 }
 
 // allows you to use this object outside of this file
-export default ProductApi;
+export default CarAPI;
