@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-const MainHeader = () => {
+const MainHeader = (props) => {
     return (
         <div>
             <h1 className="display-2">C.D.O.G Car Dealer</h1>
@@ -16,16 +16,10 @@ const MainHeader = () => {
                     </button>
 
                     <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-                    <div className="navbar-nav">
-
-                        <Link className="nav-link" to="/Signin">SignIN</Link>
-
-                        <Link className="nav-link" to="/Signup">SignUP</Link>
-
-                        <Link className="nav-link" to="/UserViewCars"> View All Cars </Link>
-
-                        
-                    </div>
+                        <div className="navbar-nav">
+                            {/* ---------- Put user navbar links here ---------- */}
+                            <Link className="nav-link" to="/UserViewCars"> View All Cars </Link>
+                        </div>
                     </div>
                 </div>
             </nav>

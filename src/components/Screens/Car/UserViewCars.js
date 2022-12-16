@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import CarCard from './../../Cards/CarCard';
 
-export default function UserViewCars() {
+export default function UserViewCars(props) {
     const [carList, setCarList] = useState([
         // Mock data :
         {id: 12314, make: "Toyota", model: "Elantra", year: "2019", price: 20000 }, 
