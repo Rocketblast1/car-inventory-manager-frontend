@@ -20,28 +20,30 @@ function App() {
   // If a user is not logged in, they will not have a JWT.
 
   const [JWT, setJWT] = useState("")
-  
+
   // const subscriber = useRef({})
   useEffect(() => {
     // if there is a JWT already 
     // if(!JWT === ""){
-      
+
     // }
-  
+
     return () => {
-      
+
     }
   }, [])
-  
+
 
 
   if (!JWT) {  // If a user is not logged in...
+    
 
     return (   // ...display login form
       <div className="App">
         <SigninSignoutNav JWT={JWT} />
         <Routes>
-          <Route path="/LoginForm" element={<LoginForm setJWT={setJWT} />} /> 
+          <Route path="/" element={<Home />} exact />
+          <Route path="/LoginForm" element={<LoginForm setJWT={setJWT} />} />
         </Routes>
         <Footer />
       </div>

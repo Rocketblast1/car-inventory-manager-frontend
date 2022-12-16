@@ -48,10 +48,15 @@ export class LoginForm extends React.Component {
     event.preventDefault();
     
     AuthAPI.authenticateUser(this.state, this.props.setJWT)
+    // .then(() => {
+      
+    // })
     this.setState({
       username: "",
       password: ""
     })
+
+
   };
 }
 export default LoginForm;

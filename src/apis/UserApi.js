@@ -2,7 +2,7 @@ const URI = "http://localhost:8080/api/user"
 
 const UserAPI = {
 
-    getUsers: (setUserList, JWT) => {
+    getUsers: (setUserList, jwt) => {
 
         // fetch -> promise based library within JS that helps you make API calls
 
@@ -54,7 +54,7 @@ const UserAPI = {
 
     },
 
-    createUser: (userToCreate, setId) => {
+    createUser: (userToCreate) => {
 
         // fetch( uri for request, request object )
         fetch(URI, {
@@ -65,9 +65,7 @@ const UserAPI = {
             .then(data => {
                 console.log("USER CREATED")
                 console.log(data)
-
-                setId(data.id)
-
+                
                 // the product was created, so we alert the user
                 alert("User was created!" +
                     `\nID: ${data.id}` +

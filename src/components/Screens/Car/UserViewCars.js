@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react'
 import CarCard from './../../Cards/CarCard';
+import CarAPI from './../../../apis/CarApi';
 
 export default function UserViewCars(props) {
     const [carList, setCarList] = useState([
@@ -11,7 +12,7 @@ export default function UserViewCars(props) {
 
     useEffect(() => {
         //When the page begins to load, make a request to populate cars
-        
+        CarAPI.getCars(setCarList, props.jwt)
         return () => {
 
         }

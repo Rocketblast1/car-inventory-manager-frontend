@@ -2,12 +2,14 @@ const URI = "http://localhost:8080/api/cars"
 
 const CarAPI = {
 
-    getCars: (setCarsList) => {
-
-        // fetch -> promise based library within JS that helps you make API calls
+    getCars: (setCarsList, jwt) => {
 
         // fetch(URI) -> retrieve data at this uri (assume a GET request unless stated otherwise)
-        fetch(URI + "/available")
+        fetch(URI, {
+            headers: { "Content-Type": "application/json", "Authorization": `Bearer ${jwt}` },
+        }
+
+        )
             .then((result) => {      // go here if request successful (200 response)
 
                 console.log("RESULT")
@@ -28,8 +30,6 @@ const CarAPI = {
     },
 
     getAvailableCars: (setCarsList) => {
-
-        // fetch -> promise based library within JS that helps you make API calls
 
         // fetch(URI) -> retrieve data at this uri (assume a GET request unless stated otherwise)
         fetch(URI + "/available")
@@ -108,19 +108,18 @@ const CarAPI = {
                 console.log("CAR UPDATED")
                 console.log(data)
 
-                setId(data.id)
 
                 // the product was deleted, so we alert the user
-                alert( `Car ${data.id} was upated to: ` +
-                `\nMake: ${data.make}` +
-                `\nModel: ${data.model}` +
-                `\nYear: ${data.year}` +
-                `\nColor: ${data.color}`
-            )
+                alert(`Car ${data.id} was upated to: ` +
+                    `\nMake: ${data.make}` +
+                    `\nModel: ${data.model}` +
+                    `\nYear: ${data.year}` +
+                    `\nColor: ${data.color}`
+                )
 
             })
             .catch((error) => { console.log(error) })
-        
+
     }
 
 }
